@@ -7,727 +7,1006 @@
 <title>The Thinking Box | Design Case Study</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-
 :root {
-  --ink: #20231f;
-  --muted: #777c74;
-  --paper: #fafaf7;
-  --line: #e6e7df;
-  --green: #dcebdd;
-  --yellow: #f5e9bd;
-  --blue: #dce8f4;
-  --pink: #f2dce2;
-  --orange: #e8a36b;
+  --ink: #252522;
+  --muted: #74736e;
+  --paper: #f8f7f3;
+  --white: #ffffff;
+  --line: #deddd6;
+  --yellow: #f1d77b;
+  --blue: #c8dce5;
+  --pink: #e9c9c5;
+  --green: #cbd9c5;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  background: #e9e9e5;
+  background: #e9e8e2;
   color: var(--ink);
-  font-family: 'DM Sans', sans-serif;
-  line-height: 1.65;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.55;
 }
 
 .page {
+  width: 100%;
   max-width: 1100px;
-  margin: 35px auto;
+  margin: 34px auto;
+  padding: 66px 72px;
   background: var(--paper);
-  padding: 65px 75px;
-  box-shadow: 0 5px 30px #0000000b;
+  box-shadow: 0 5px 25px rgba(0,0,0,.07);
 }
 
-h1, h2, h3 {
-  font-family: 'Manrope', sans-serif;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: clamp(42px, 6vw, 76px);
-  letter-spacing: -4px;
-  margin: 15px 0;
-}
-
-h2 {
-  font-size: 28px;
-  letter-spacing: -1px;
-  margin-bottom: 15px;
-}
-
-h3 {
-  font-size: 17px;
-  margin-bottom: 8px;
-}
-
-p { font-size: 14px; }
-
-.eyebrow {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--muted);
-}
-
-.subtitle {
-  font-size: 19px;
-  max-width: 650px;
-  color: #656a62;
-}
-
-.topbar {
+.topline {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 15px;
+  color: var(--muted);
   font-size: 10px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 25px 0;
-}
-
-.tag {
-  padding: 6px 12px;
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  font-size: 11px;
 }
 
 .hero {
-  padding: 65px 0 30px;
+  padding: 65px 0 42px;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: clamp(48px, 7vw, 78px);
+  line-height: .98;
+  letter-spacing: -4px;
+  margin: 0 0 22px;
+  font-weight: 600;
+}
+
+.subtitle {
+  max-width: 650px;
+  font-size: 19px;
+  line-height: 1.45;
+  color: #55544f;
 }
 
 .hero-image {
   width: 100%;
-  height: 310px;
-  object-fit: cover;
-  border-radius: 5px;
-  background: #e9e8df;
-}
-
-.placeholder {
-  min-height: 180px;
-  background: #eeeee8;
-  border: 1px dashed #c8c9bf;
-  border-radius: 5px;
+  min-height: 300px;
+  margin-top: 38px;
+  background: #e7e4da;
+  border: 1px solid var(--line);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 20px;
-  color: #777c74;
+  padding: 30px;
+  color: #77756d;
   font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.caption {
-  font-size: 10px;
-  color: var(--muted);
-  margin-top: 7px;
+.hero-image img,
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section {
-  margin-top: 55px;
+  margin-top: 54px;
 }
 
-.section-number {
-  color: #bd8d54;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
+.section-label {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  font-weight: 500;
+  margin: 0 0 18px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+p {
+  font-size: 14px;
+  color: #55544f;
+  margin: 0 0 13px;
+}
+
+strong {
+  color: var(--ink);
 }
 
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  align-items: start;
+  gap: 34px;
 }
 
 .three-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 15px;
 }
 
-.card {
+.info-card {
   padding: 20px;
+  background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 5px;
-  background: white;
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
 }
 
 .question {
-  padding: 27px;
-  border-left: 4px solid var(--orange);
-  background: #f2f0e9;
-  font-family: 'Manrope', sans-serif;
-  font-size: 21px;
-  font-weight: 600;
-  line-height: 1.5;
+  background: #eeece3;
+  padding: 27px 30px;
+  border-left: 4px solid var(--yellow);
   margin: 25px 0;
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--ink);
 }
 
-.artifact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.artifact-grid .placeholder {
-  min-height: 210px;
-}
-
-.timeline {
-  border-left: 1px solid #c9cbbf;
-  margin-left: 8px;
-  padding-left: 25px;
-}
-
-.timeline-item {
-  position: relative;
-  padding-bottom: 23px;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -31px;
-  top: 6px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--orange);
-}
-
-.time {
-  font-size: 10px;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.process-card {
-  padding: 18px;
-  border-radius: 5px;
-  background: white;
+.future-card {
+  background: var(--white);
   border: 1px solid var(--line);
+  padding: 23px;
+  min-height: 150px;
 }
 
-.coin {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
+.future-card .number {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 9px;
+  background: #eeece3;
+  margin: 0 5px 5px 0;
+}
+
+.image-placeholder {
+  min-height: 210px;
+  background: #e9e7df;
+  border: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  border: 1px solid #00000012;
-}
-
-.coin-green { background: var(--green); }
-.coin-yellow { background: var(--yellow); }
-.coin-blue { background: var(--blue); }
-.coin-pink { background: var(--pink); }
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 12px;
-  background: white;
-}
-
-th, td {
-  text-align: left;
-  padding: 15px;
-  border-bottom: 1px solid var(--line);
-  vertical-align: top;
-}
-
-th {
-  font-size: 10px;
-  text-transform: uppercase;
+  text-align: center;
+  padding: 22px;
+  color: #77756d;
+  font-size: 11px;
   letter-spacing: 1px;
-  color: var(--muted);
+  text-transform: uppercase;
 }
 
-.step {
-  padding: 23px;
-  border: 1px solid var(--line);
-  background: white;
-  border-radius: 5px;
-  margin-bottom: 12px;
+.image-placeholder.tall {
+  min-height: 300px;
+}
+
+.image-placeholder.small {
+  min-height: 150px;
+}
+
+.caption {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.process-step:last-child {
+  border-bottom: none;
 }
 
 .step-number {
-  font-family: 'Manrope';
-  font-size: 30px;
-  color: #c18d55;
-  font-weight: 800;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
 }
 
-.matrix {
+.process-step p {
+  margin-bottom: 0;
+}
+
+.coin-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 23px 0;
 }
 
-.matrix-cell {
-  padding: 20px;
-  min-height: 125px;
-  border-radius: 5px;
+.coin {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 13px;
+  border: 1px solid rgba(0,0,0,.08);
 }
 
-.matrix-cell h3 { margin-top: 0; }
+.coin strong {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
 
-.reflection {
-  background: #f0f0e9;
+.coin span {
+  font-size: 10px;
+  color: #55544f;
+}
+
+.coin.yellow { background: var(--yellow); }
+.coin.blue { background: var(--blue); }
+.coin.pink { background: var(--pink); }
+.coin.green { background: var(--green); }
+
+.agenda {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.agenda th {
+  text-align: left;
+  padding: 12px 10px;
+  background: #eeece3;
+  font-weight: 600;
+}
+
+.agenda td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  color: #55544f;
+}
+
+.agenda td:first-child {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.agenda td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.note {
+  background: #f0eee7;
+  border: 1px solid var(--line);
+  padding: 18px 20px;
+  margin-top: 20px;
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+}
+
+.iteration-panel {
+  background: #eeece3;
   padding: 30px;
-  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.iteration-panel h3 {
+  margin-top: 0;
+}
+
+.iteration-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.placeholder-note {
+  color: #8b8060;
+  font-style: italic;
+  font-size: 12px;
 }
 
 .footer {
+  margin-top: 55px;
+  padding-top: 15px;
   border-top: 1px solid var(--line);
-  margin-top: 60px;
-  padding-top: 18px;
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
   color: var(--muted);
+  font-size: 10px;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
   .page {
     margin: 0;
-    padding: 30px 22px;
+    padding: 35px 24px;
   }
-  .two-col, .three-col, .artifact-grid {
+
+  .two-col,
+  .three-col {
     grid-template-columns: 1fr;
   }
-  h1 { letter-spacing: -2px; }
-  .hero { padding-top: 35px; }
-  .hero-image { height: 220px; }
+
+  .coin-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .agenda {
+    font-size: 10px;
+  }
+
+  .agenda td,
+  .agenda th {
+    padding: 8px 5px;
+  }
 }
 
 @media print {
-  body { background: white; }
-  .page {
-    margin: 0 auto;
-    box-shadow: none;
-    max-width: none;
-    padding: 35px 45px;
-    page-break-after: always;
+  body {
+    background: white;
   }
-  .page:last-child { page-break-after: auto; }
+
+  .page {
+    box-shadow: none;
+    margin: 0 auto;
+    max-width: none;
+    padding: 45px 55px;
+  }
+
+  .page-break {
+    break-before: page;
+  }
+
+  .section {
+    break-inside: avoid;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- PAGE ONE -->
+<!-- PAGE 1 -->
+
 <main class="page">
 
-  <div class="topbar">
-    <span>Design & Technology Innovation</span>
-    <span>Design Case Study / 01</span>
+  <div class="topline">
+    <span>Duke University · Design & Technology Innovation</span>
+    <span>Project Case Study · 01</span>
   </div>
 
   <header class="hero">
-    <div class="eyebrow">Education · Speculative Design · Co-design</div>
-    <h1>The<br>Thinking Box.</h1>
-    <p class="subtitle">
-      Designing a physical intervention that encourages independent
-      thinking, diverse perspectives, and human connection in
-      AI-integrated classrooms.
-    </p>
-
-    <div class="tags">
-      <span class="tag">Co-design</span>
-      <span class="tag">Physical Prototyping</span>
-      <span class="tag">Future Scenarios</span>
-      <span class="tag">Education</span>
+    <div class="eyebrow">Education · Futures · Physical Intervention</div>
+    <h1>The Thinking<br>Box</h1>
+    <div class="subtitle">
+      A physical classroom tool designed to encourage students to think
+      independently, consider different perspectives, and continue learning
+      through discussion and human connection as AI becomes more integrated
+      into education.
     </div>
 
-    <!-- Replace with an actual photograph of your prototype -->
-    <div class="placeholder hero-image">
-      ADD YOUR THINKING BOX HERO PHOTOGRAPH HERE
+    <div class="hero-image">
+      ADD PHOTO OF THE THINKING BOX AND PERSPECTIVE COINS
     </div>
-    <div class="caption">01 / The Thinking Box and its perspective coins.</div>
+    <div class="caption">The Thinking Box — initial team concept and physical prototype.</div>
   </header>
 
   <section class="section">
-    <div class="section-number">01 — THE CHALLENGE</div>
-    <h2>Rethinking the role of AI in education.</h2>
+    <div class="section-label">01 / Project Background</div>
+    <h2>Why this project?</h2>
+    <p>
+      As AI becomes more common in education, there are new opportunities
+      for how students learn and how teachers support them. At the same time,
+      there are concerns about students relying too much on AI instead of
+      developing their own ideas, problem-solving skills, and ability to
+      communicate with others.
+    </p>
+    <p>
+      Our project focuses on exploring how AI can be part of education
+      without taking away the parts of learning that come from thinking for
+      yourself, hearing different perspectives, and interacting with other
+      people.
+    </p>
+
+    <div class="question">
+      How might we integrate AI into education while preserving students'
+      cognitive development, social skills, and human connection?
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">02 / Futures Thinking</div>
+    <h2>The future we want to move toward</h2>
+    <p>
+      Through our futures work, we explored different ways AI could change
+      education. We focused on a preferred future where AI is available as
+      a learning support, but students still have opportunities to think
+      independently, develop their own opinions, and learn from one another.
+    </p>
 
     <div class="two-col">
-      <div>
+      <div class="future-card">
+        <div class="number">01 / CURRENT CONCERNS</div>
+        <h3>AI replacing parts of learning</h3>
         <p>
-          As artificial intelligence becomes increasingly integrated
-          into education, new opportunities are emerging for personalized
-          learning, accessibility, and student support.
-        </p>
-        <p>
-          However, increased reliance on AI also raises questions about
-          students' ability to think independently, develop social skills,
-          and maintain meaningful connections with one another.
+          Students may become more dependent on AI for answers and ideas,
+          with fewer opportunities to work through problems, communicate,
+          and develop their own thinking.
         </p>
       </div>
 
-      <div class="question">
-        How might we integrate AI into education while preserving
-        students' cognitive development, social skills, and human connection?
+      <div class="future-card">
+        <div class="number">02 / PREFERRED FUTURE</div>
+        <h3>AI supporting learning</h3>
+        <p>
+          AI is used as a tool, while students continue to develop
+          independent thinking, explore different viewpoints, and build
+          connections with classmates and teachers.
+        </p>
+      </div>
+    </div>
+
+    <div class="image-placeholder" style="margin-top:18px;">
+      ADD FUTURE SCENARIO POSTER / FUTURES WORK ASSET
+    </div>
+    <div class="caption">Our futures work helped establish the direction for the intervention.</div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">03 / The Intervention</div>
+    <h2>Introducing the Thinking Box</h2>
+    <p>
+      The Thinking Box is a physical classroom tool that uses perspective
+      coins to help students expand their thinking. Instead of immediately
+      looking for an answer, students select a coin with a prompt that
+      encourages them to consider an idea from another point of view.
+    </p>
+    <p>
+      The goal is to make students slow down, question their first
+      interpretation, and build on ideas through discussion with their
+      classmates. The box is meant to support learning, not replace the
+      teacher, the student, or the conversation happening in the classroom.
+    </p>
+
+    <div class="image-placeholder tall">
+      ADD PHOTO OF THE BOX, ITS SECTIONS, AND THE COINS
+    </div>
+    <div class="caption">Initial physical concept of the Thinking Box.</div>
+
+    <h3 style="margin-top:28px;">Perspective coins</h3>
+    <p>
+      Each coin introduces a different way to approach a question or idea.
+      Students use the prompts to look beyond their first response and
+      consider other interpretations.
+    </p>
+
+    <div class="coin-row">
+      <div class="coin yellow">
+        <strong>WHY</strong>
+        <span>Think about the reason behind an idea</span>
+      </div>
+      <div class="coin blue">
+        <strong>?</strong>
+        <span>Question an initial assumption</span>
+      </div>
+      <div class="coin pink">
+        <strong>POV</strong>
+        <span>Consider another person's perspective</span>
+      </div>
+      <div class="coin green">
+        <strong>ACCESS</strong>
+        <span>Consider different experiences and needs</span>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="section-number">02 — THE INTERVENTION</div>
-    <h2>A tool for thinking beyond the obvious.</h2>
-
+    <div class="section-label">04 / How It Could Work in a Classroom</div>
+    <h2>Putting the coins into use</h2>
     <p>
-      The Thinking Box is a physical classroom tool designed to encourage
-      students to explore different perspectives rather than relying
-      solely on their initial interpretations or AI-generated responses.
+      For example, a class reading <em>The Great Gatsby</em> could start with
+      the question: "Why does Gatsby go to such great lengths to be with
+      Daisy?"
     </p>
 
-    <div class="artifact-grid">
+    <div class="process-step">
+      <div class="step-number">1</div>
       <div>
-        <div class="placeholder">ADD PHOTO OF THE BOX</div>
-        <div class="caption">02 / Physical container prototype.</div>
-      </div>
-      <div>
-        <div class="placeholder">ADD PHOTO OF THE COINS</div>
-        <div class="caption">03 / Perspective prompt coins.</div>
+        <h3>Start with a question</h3>
+        <p>The teacher introduces a discussion question for the class.</p>
       </div>
     </div>
 
-    <p>
-      Students select a coin containing a question or perspective prompt.
-      These prompts challenge students to reconsider their assumptions,
-      expand their thinking, and engage in discussion with classmates.
-      The tool positions AI as a support for learning rather than a
-      replacement for student thought and interaction.
-    </p>
+    <div class="process-step">
+      <div class="step-number">2</div>
+      <div>
+        <h3>Select a coin</h3>
+        <p>A student draws a perspective coin from the Thinking Box.</p>
+      </div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-number">3</div>
+      <div>
+        <h3>Think and discuss</h3>
+        <p>
+          Students use the prompt to explore the question and consider
+          whether it changes their original understanding.
+        </p>
+      </div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-number">4</div>
+      <div>
+        <h3>Flip and pass</h3>
+        <p>
+          The coin can be flipped and passed to another student, who
+          continues the discussion using the same perspective.
+        </p>
+      </div>
+    </div>
+
+    <div class="image-placeholder" style="margin-top:18px;">
+      ADD PHOTOS OR DIAGRAM OF THE COIN INTERACTION / CLASSROOM EXAMPLE
+    </div>
+    <div class="caption">Example of how students could use the coins during a classroom discussion.</div>
   </section>
 
   <section class="section">
-    <div class="section-number">03 — CO-DESIGN PROCESS</div>
-    <h2>Turning a future vision into a classroom experience.</h2>
-
+    <div class="section-label">05 / My Role and Process</div>
+    <h2>My involvement in the project</h2>
     <p>
-      Our team developed a co-design workshop to explore how the Thinking
-      Box could support classroom activities where AI is available,
-      but students still depend on their own thinking and one another.
+      Throughout this project, I have been involved in developing the
+      Thinking Box concept and working with my team to plan how we could
+      introduce it to participants and learn more about how it might work
+      in an educational setting.
     </p>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="time">05 min · Warm-up</div>
-        <h3>Rose, Bud, Thorn</h3>
-        <p>
-          Participants identified current benefits, challenges, and
-          emerging opportunities for AI in education.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="time">07 min · Brainstorm</div>
-        <h3>Collaborative ideation</h3>
-        <p>
-          Small groups developed classroom experiences integrating AI
-          while maintaining student interaction and independent thinking.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="time">08 min · Intervention</div>
-        <h3>Draw a perspective coin</h3>
-        <p>
-          Each group selected a coin and used its prompt to challenge
-          or expand an initial classroom idea.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="time">05 min · Visualization</div>
-        <h3>Sketch the experience</h3>
-        <p>
-          Participants visualized their revised ideas on large sheets
-          of paper.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="time">05 min · Reflection</div>
-        <h3>Share and reflect</h3>
-        <p>
-          Groups presented their ideas and reflected on how the coins
-          influenced their thinking.
-        </p>
-      </div>
-
+    <p>
+      Our process has included developing the future scenario, creating
+      the physical intervention, planning a co-design workshop, and
+      preparing to gather feedback that can help us continue improving
+      the idea.
+    </p>
+    <div class="note">
+      <p><strong>My individual contributions:</strong></p>
+      <p class="placeholder-note">
+        EDIT THIS SECTION TO ADD YOUR SPECIFIC CONTRIBUTIONS, WHAT YOU
+        WORKED ON WITH THE TEAM, AND YOUR ROLE IN THE PROJECT.
+      </p>
     </div>
-
-    <div class="caption">
-      04 / Workshop activities. The full workshop also included a
-      five-minute introduction and five-minute intervention presentation.
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-number">04 — MY ROLE</div>
-    <h2>From concept to facilitated experience.</h2>
-
-    <p>
-      As part of the design team, I contributed to developing the
-      Thinking Box intervention and translating our future-focused
-      concept into a tangible classroom experience. I participated
-      in refining the workshop structure, developing facilitation
-      materials, and considering how physical prompts could encourage
-      students to explore perspectives beyond their initial ideas.
-    </p>
-
-    <p>
-      Through the co-design process, I focused on how the intervention
-      could be clearly communicated and practically incorporated into
-      classroom discussions.
-    </p>
   </section>
 
   <div class="footer">
-    <span>THE THINKING BOX</span>
-    <span>PROJECT OVERVIEW / 01</span>
+    <span>The Thinking Box</span>
+    <span>Project Development · 01</span>
   </div>
 
 </main>
 
 
-<!-- PAGE TWO -->
-<main class="page">
+<!-- PAGE 2 -->
 
-  <div class="topbar">
-    <span>The Thinking Box</span>
-    <span>Design Development / 02</span>
+<main class="page page-break">
+
+  <div class="topline">
+    <span>Duke University · Design & Technology Innovation</span>
+    <span>Project Case Study · 02</span>
   </div>
 
-  <section class="hero">
-    <div class="eyebrow">Iteration · Testing · Design Development</div>
-    <h1>Refining the<br>experience.</h1>
-    <p class="subtitle">
-      Using facilitation feedback to improve the clarity, usability,
-      and classroom application of the intervention.
-    </p>
+  <section class="hero" style="padding-bottom:20px;">
+    <div class="eyebrow">Co-design · Workshop Development · Iteration</div>
+    <h1>Developing<br>the Experience</h1>
+    <div class="subtitle">
+      Using a co-design workshop to explore how the Thinking Box could
+      support students' thinking and interactions in the classroom.
+    </div>
   </section>
 
   <section class="section">
-    <div class="section-number">05 — FEEDBACK & ITERATION</div>
-    <h2>Making the experience more intuitive.</h2>
-
+    <div class="section-label">06 / Co-design Approach</div>
+    <h2>Learning with participants</h2>
     <p>
-      Following our facilitation practice round, we identified
-      opportunities to improve the clarity, usability, and overall
-      flow of the workshop. Feedback highlighted that participants
-      needed a clearer understanding of how the Thinking Box would
-      work, more space to visualize their ideas, and a more intuitive
-      way to reflect on the intervention's impact.
+      We planned a co-design workshop to get input from participants and
+      explore how AI could be available in education while still supporting
+      students' social skills, cognitive development, and human connection.
+    </p>
+    <p>
+      Instead of only presenting our idea, we wanted participants to
+      brainstorm their own classroom experiences and then use the
+      perspective coins to challenge or expand their initial ideas.
+      This would help us understand how the Thinking Box could be used
+      and what might need to change.
     </p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Original approach</th>
-          <th>Feedback / opportunity</th>
-          <th>Iteration</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Verbal explanation of the intervention.</td>
-          <td>The process was difficult to follow.</td>
-          <td>Created step-by-step instructional slides.</td>
-        </tr>
-        <tr>
-          <td>Sticky notes for sketching.</td>
-          <td>Limited space for visualizing ideas.</td>
-          <td>Added larger sheets of paper.</td>
-        </tr>
-        <tr>
-          <td>Abrupt workshop ending.</td>
-          <td>The closing needed more structure.</td>
-          <td>Added a reflection and takeaway activity.</td>
-        </tr>
-        <tr>
-          <td>Using the box for both prompts and evaluation.</td>
-          <td>The interaction felt confusing.</td>
-          <td>Introduced a separate four-section reflection matrix.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section">
-    <div class="section-number">06 — INDIVIDUAL DESIGN DEVELOPMENT</div>
-    <h2>Translating prompts into meaningful discussion.</h2>
-
-    <p>
-      I further developed the classroom interaction to demonstrate
-      how the Thinking Box could be used during an actual learning
-      activity. Using a discussion of <em>The Great Gatsby</em> as an
-      example, the process illustrates how students can use the
-      perspective coins to challenge their interpretations and
-      build on one another's ideas.
-    </p>
-
-    <div class="step">
-      <div class="step-number">01</div>
-      <h3>Introduce a discussion</h3>
-      <p>
-        The teacher introduces a discussion question about the book.
-      </p>
-      <div class="question">
-        Why does Gatsby go to such great lengths to be with Daisy?
+    <div class="two-col">
+      <div class="image-placeholder">
+        ADD WORKSHOP SETUP / MATERIALS PHOTO
+      </div>
+      <div class="image-placeholder">
+        ADD WORKSHOP SLIDES / CO-DESIGN ACTIVITY PHOTO
       </div>
     </div>
+  </section>
 
-    <div class="step">
-      <div class="step-number">02</div>
-      <h3>Select a perspective coin</h3>
-      <p>
-        Students randomly select a coin from the Thinking Box.
-        Each coin introduces a different way to approach the discussion.
-      </p>
+  <section class="section">
+    <div class="section-label">07 / Practice Round</div>
+    <h2>Preparing for the workshop</h2>
+    <p>
+      Before facilitating the actual co-design workshop, we completed a
+      practice round to go through the activities and see what parts of
+      the process needed to be clearer or adjusted.
+    </p>
+    <p>
+      The practice round helped us identify areas where the instructions,
+      materials, and overall flow could be improved before working with
+      our actual participants.
+    </p>
 
-      <div class="three-col">
-        <div class="process-card">
-          <div class="coin coin-green">WHY</div>
-          <h3>Why?</h3>
-          <p>Why does Gatsby pursue Daisy?</p>
-        </div>
-
-        <div class="process-card">
-          <div class="coin coin-yellow">?</div>
-          <h3>Question</h3>
-          <p>Is Gatsby in love with Daisy or his idealized version of her?</p>
-        </div>
-
-        <div class="process-card">
-          <div class="coin coin-blue">POV</div>
-          <h3>Point of view</h3>
-          <p>How might Daisy interpret Gatsby's actions differently?</p>
-        </div>
-      </div>
-
-      <div class="process-card" style="margin-top:12px;">
-        <div class="coin coin-pink">ACCESS</div>
-        <h3>Accessibility and life experiences</h3>
+    <div class="three-col">
+      <div class="info-card">
+        <h3>Clearer instructions</h3>
         <p>
-          How might different life experiences and opportunities
-          influence how someone interprets Gatsby's pursuit of Daisy?
+          We wanted to make the Thinking Box easier to understand, so we
+          planned step-by-step slides explaining how it works in a
+          classroom and how participants would use it during the workshop.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>More space to sketch</h3>
+        <p>
+          Sticky notes were not enough for developing and communicating
+          ideas, so we planned to include larger sheets of paper for
+          participants to sketch their concepts.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Clearer reflection</h3>
+        <p>
+          We decided to separate the reflection activity from the Thinking
+          Box. A four-section matrix would be used to reflect on the
+          impact of the coin instead.
         </p>
       </div>
     </div>
 
-    <div class="step">
-      <div class="step-number">03</div>
-      <h3>Discuss and reconsider</h3>
+    <div class="note">
+      <p><strong>Changes planned for the actual facilitation</strong></p>
       <p>
-        Students share their interpretations, challenge assumptions,
-        and consider whether the additional perspective changes
-        their understanding.
-      </p>
-    </div>
-
-    <div class="step">
-      <div class="step-number">04</div>
-      <h3>Flip and pass</h3>
-      <p>
-        Students flip the coin and pass it to the next student.
-        The next student continues the discussion using the same
-        perspective, allowing multiple voices to contribute.
+        We also planned to make the introduction and closing more
+        structured, so participants understand the purpose of the workshop,
+        what they will be doing, and how their ideas will help us continue
+        developing the intervention.
       </p>
     </div>
   </section>
 
   <section class="section">
-    <div class="section-number">07 — EVALUATING THE INTERVENTION</div>
-    <h2>Understanding the impact of a new perspective.</h2>
-
+    <div class="section-label">08 / Updated Workshop Plan</div>
+    <h2>40-minute co-design workshop</h2>
     <p>
-      We separated the reflection activity from the Thinking Box
-      itself. Participants now place their coin in a four-section
-      matrix to communicate how much the prompt influenced their
-      original idea.
+      The updated workshop is designed to move participants from thinking
+      about AI in education to developing and expanding their own ideas
+      using the Thinking Box.
     </p>
 
-    <div class="matrix">
-      <div class="matrix-cell" style="background:#dcebdd;">
-        <h3>Significant change</h3>
-        <p>The coin substantially changed our original idea.</p>
-      </div>
+    <table class="agenda">
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <th>Time</th>
+          <th>What participants will do</th>
+          <th>Facilitator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Introduction</td>
+          <td>5 min</td>
+          <td>
+            Introduce the two future states, workshop goals, and participant
+            roles. Ask participants to imagine a future where AI supports
+            education while independent thinking and human connection
+            remain important.
+          </td>
+          <td>Laura</td>
+        </tr>
+        <tr>
+          <td>Warm-up</td>
+          <td>5 min</td>
+          <td>
+            Complete a Rose, Bud, Thorn activity. Participants identify
+            what is useful about AI in education, where it might hinder
+            learning, and what new possibilities could support the
+            preferred future.
+          </td>
+          <td>Laura</td>
+        </tr>
+        <tr>
+          <td>Intervention presentation</td>
+          <td>5 min</td>
+          <td>
+            Introduce the Thinking Box and explain how the perspective
+            coins work in a classroom and during the workshop.
+          </td>
+          <td>Fatima</td>
+        </tr>
+        <tr>
+          <td>Brainstorming</td>
+          <td>7 min</td>
+          <td>
+            Work in groups of 2–3 to brainstorm ways AI can be available
+            in education while maintaining social skills, cognitive
+            development, and human connection.
+          </td>
+          <td>Dhanvi</td>
+        </tr>
+        <tr>
+          <td>Draw a coin</td>
+          <td>8 min</td>
+          <td>
+            Select a perspective coin from the Thinking Box and use its
+            prompt to challenge or expand the group's original idea.
+          </td>
+          <td>Dhanvi</td>
+        </tr>
+        <tr>
+          <td>Sketch</td>
+          <td>5 min</td>
+          <td>
+            Sketch the group's updated idea on a large sheet of paper.
+          </td>
+          <td>Fatima</td>
+        </tr>
+        <tr>
+          <td>Share out and closing</td>
+          <td>5 min</td>
+          <td>
+            Share the original idea, the coin perspective, and the final
+            sketch. Place the coin in a four-section matrix to reflect
+            on its impact. Take a blank coin and pass a takeaway forward.
+          </td>
+          <td>Fatima</td>
+        </tr>
+      </tbody>
+    </table>
 
-      <div class="matrix-cell" style="background:#dce8f4;">
-        <h3>Some change</h3>
-        <p>The coin expanded or adjusted our idea.</p>
-      </div>
+    <div class="note">
+      <p><strong>Materials</strong></p>
+      <p>
+        Thinking Box and perspective coins, blank coins, presentation
+        slides, large white sheets of paper, smaller yellow paper,
+        sticky notes, and Sharpies.
+      </p>
+      <p><strong>Participants</strong></p>
+      <p>
+        Anyone interested in education and AI, with a mix of educators
+        and students being ideal.
+      </p>
+    </div>
+  </section>
 
-      <div class="matrix-cell" style="background:#f5e9bd;">
-        <h3>Minor change</h3>
-        <p>The coin introduced a small consideration.</p>
-      </div>
+  <section class="section">
+    <div class="section-label">09 / Individual Iteration</div>
+    <h2>Continuing to develop the Thinking Box</h2>
+    <p>
+      For my individual iteration, I want to focus on the Thinking Box
+      itself and how the physical product works. Based on the practice
+      round, I started thinking more about how students interact with
+      the box and how its design can make the experience easier to
+      understand and use.
+    </p>
+    <p>
+      One thing we noticed during the practice round was that using the
+      box for both selecting coins and reflecting on the activity made
+      the process confusing. We decided to move the reflection activity
+      to a separate four-section matrix, allowing the box to focus on
+      the perspective coins.
+    </p>
 
-      <div class="matrix-cell" style="background:#ecece8;">
-        <h3>No change</h3>
-        <p>The coin did not significantly alter our idea.</p>
+    <div class="iteration-panel">
+      <div class="section-label">My design direction</div>
+      <h3>Making the box easier to use</h3>
+      <p>
+        I want to explore how the physical design of the Thinking Box
+        could better guide students through the activity. This includes
+        looking at how the coins are organized, how students select and
+        return them, and how the box makes it clear what students should
+        do next.
+      </p>
+      <p>
+        I also want to explore how the four sections of the box could
+        work with the different perspective coins and whether the
+        physical layout makes the interaction more clear for students.
+        The goal is to make the box feel like a simple classroom tool
+        that students can use without needing a lot of explanation.
+      </p>
+      <p class="placeholder-note">
+        THIS IS THE DIRECTION I PLAN TO DEVELOP FURTHER. ADD UPDATED
+        SKETCHES, DESIGN CHANGES, AND PHOTOS OF THE ITERATED BOX HERE.
+      </p>
+    </div>
+
+    <div class="two-col" style="margin-top:20px;">
+      <div>
+        <div class="image-placeholder tall">
+          ADD INITIAL BOX DESIGN / CURRENT PROTOTYPE
+        </div>
+        <div class="caption">Initial design before individual iteration.</div>
+      </div>
+      <div>
+        <div class="image-placeholder tall">
+          ADD UPDATED BOX SKETCH / ITERATED PROTOTYPE
+        </div>
+        <div class="caption">Updated design — add after developing the iteration.</div>
+      </div>
+    </div>
+
+    <div class="section" style="margin-top:28px;">
+      <h3>What I plan to explore</h3>
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <div>
+          <h3>Organization of the coins</h3>
+          <p>
+            How can the coins be organized so students can easily see
+            and select the perspective they want to use?
+          </p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <div>
+          <h3>How students interact with the box</h3>
+          <p>
+            How can the box make it clear where students should draw
+            coins from and how they should return them?
+          </p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <div>
+          <h3>Making the experience more clear</h3>
+          <p>
+            How can the physical layout help students understand the
+            activity and move through it with less confusion?
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="section-number">08 — REFLECTION & NEXT STEPS</div>
-    <h2>Designing for connection, not replacement.</h2>
+    <div class="section-label">10 / Workshop Learnings</div>
+    <h2>What we learn from participants</h2>
+    <p>
+      The actual co-design workshop will help us understand how
+      participants respond to the Thinking Box, what ideas they develop,
+      and how using a perspective coin changes or expands their initial
+      thinking.
+    </p>
+    <p>
+      We plan to use the ideas recorded on paper, the final sketches,
+      participant discussion, and the coin placements in the reflection
+      matrix to help us identify what is working and what could be
+      improved.
+    </p>
 
-    <div class="reflection">
-      <p>
-        This project reinforced the importance of translating
-        speculative futures into tangible, understandable experiences.
-        Through the facilitation practice and feedback process, I
-        learned that an intervention must be intuitive enough for
-        participants to understand without extensive explanation.
-      </p>
-
-      <p>
-        I also learned that physical design can serve as more than
-        a delivery mechanism for information. In this case, the coins
-        act as conversation starters that encourage students to
-        question assumptions, listen to others, and develop ideas
-        collaboratively.
-      </p>
-
-      <p>
-        Moving forward, the Thinking Box could be tested with actual
-        students and educators to evaluate how different prompts
-        influence participation, discussion, and independent thinking
-        in classroom environments.
-      </p>
+    <div class="two-col">
+      <div class="info-card">
+        <h3>Participant feedback</h3>
+        <p class="placeholder-note">
+          EDIT AND ADD AFTER THE CO-DESIGN WORKSHOP.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Ideas and responses</h3>
+        <p class="placeholder-note">
+          ADD PARTICIPANT IDEAS AND RESPONSES AFTER THE WORKSHOP.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>What worked / what could change</h3>
+        <p class="placeholder-note">
+          EDIT AFTER REFLECTING ON THE ACTUAL FACILITATION.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Next steps</h3>
+        <p class="placeholder-note">
+          ADD NEXT STEPS BASED ON WHAT WE LEARN.
+        </p>
+      </div>
     </div>
+
+    <div class="image-placeholder" style="margin-top:20px;">
+      ADD PHOTOS OF THE ACTUAL CO-DESIGN WORKSHOP AND PARTICIPANT WORK
+    </div>
+    <div class="caption">Add documentation from the actual workshop after facilitation.</div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">11 / Reflection</div>
+    <h2>Where the project goes next</h2>
+    <p>
+      This project has helped me think about how a physical intervention
+      can encourage students to approach learning differently, especially
+      as AI becomes more common in education. The Thinking Box is not
+      meant to keep AI out of the classroom, but to make sure students
+      still have opportunities to think for themselves and learn from
+      other people.
+    </p>
+    <p>
+      The next step is to use the co-design workshop to learn more about
+      how the intervention could work in practice. I also plan to
+      continue developing the physical box so that the way students
+      interact with it is clear and easy to follow.
+    </p>
+    <p class="placeholder-note">
+      EDIT THIS REFLECTION AFTER THE WORKSHOP AND INDIVIDUAL BOX ITERATION
+      ARE COMPLETE. ADD WHAT YOU LEARNED AND HOW YOUR DESIGN CHANGED.
+    </p>
   </section>
 
   <div class="footer">
-    <span>THE THINKING BOX</span>
-    <span>DESIGN DEVELOPMENT / 02</span>
+    <span>The Thinking Box</span>
+    <span>Project Development · 02</span>
   </div>
 
 </main>
